@@ -12,7 +12,8 @@
     "languages": [{
         "id": "adder",
         "aliases": ["Adder", "adder"],
-        "extensions": [".adder"]
+        "extensions": [".adder"],
+        "configuration": "./configs/adder-language-configuration.json"
       }
     ],
     "grammars": [{

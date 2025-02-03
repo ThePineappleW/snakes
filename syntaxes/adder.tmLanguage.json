@@ -1,0 +1,39 @@
+{
+  "scopeName": "source.adder",
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "patterns": [
+        { "include": "#number" },
+        { "include": "#identifier" },
+        { "include": "#keyword" },
+        { "include": "#paren-expression" }
+      ]
+    },
+    "number": {
+      "match": "-?\\d+",
+      "name": "constant.numeric"
+    }, 
+    "identifier": {
+      "match": "[a-zA-Z]\\w*",
+      "name": "variable"
+    },
+    "keyword": {
+      "match": "let|add1|sub1|=",
+      "name":"keyword.control"
+    },
+    
+    "paren-expression": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.paren.open" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.paren.close" }
+      },
+      "name": "expression.group",
+      "patterns": [{ "include": "#expression" }]
+    }
+  }
+}

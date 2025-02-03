@@ -1,0 +1,23 @@
+{
+  "name": "snakes",
+  "displayName": "Snakes",
+  "description": "Language support for CS4410",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.21.0"
+  },
+  "publisher": "Emery",
+  "contributes": {
+    "languages": [{
+        "id": "adder",
+        "aliases": ["Adder", "adder"],
+        "extensions": [".adder"]
+      }
+    ],
+    "grammars": [{
+        "language": "adder",
+        "scopeName": "source.adder",
+        "path": "./syntaxes/adder.tmLanguage.json"
+    }]
+  }
+}

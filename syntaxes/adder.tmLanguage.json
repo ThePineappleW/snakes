@@ -19,7 +19,7 @@
       "name": "variable"
     },
     "keyword": {
-      "match": "let|add1|sub1|=",
+      "match": "let|add1|sub1",
       "name":"keyword.control"
     },
     

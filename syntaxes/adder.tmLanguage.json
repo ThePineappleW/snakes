@@ -13,30 +13,30 @@
     },
     "number": {
       "match": "-?\\d+",
-      "name": "constant.numeric"
+      "name": "constant.numeric.adder"
     }, 
     "identifier": {
       "match": "[a-zA-Z]\\w*",
-      "name": "variable"
+      "name": "variable.adder"
     },
     "let": {
       "match": "let",
-      "name":"keyword.control"
+      "name":"keyword.control.adder"
     },
     "operator": {
       "match": "add1|sub1",
-      "name": "keyword.operator"
+      "name": "keyword.operator.adder"
     },
     "paren-expression": {
       "begin": "\\(",
       "end": "\\)",
       "beginCaptures": {
-        "0": { "name": "punctuation.paren.open" }
+        "0": { "name": "punctuation.paren.open.adder" }
       },
       "endCaptures": {
-        "0": { "name": "punctuation.paren.close" }
+        "0": { "name": "punctuation.paren.close.adder" }
       },
-      "name": "expression.group",
+      "name": "expression.group.adder",
       "patterns": [{ "include": "#expression" }]
     }
   }

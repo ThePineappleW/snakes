@@ -13,31 +13,31 @@
     },
     "number": {
       "match": "-?\\d+",
-      "name": "constant.numeric"
+      "name": "constant.numeric.boa"
     }, 
     "identifier": {
       "match": "[a-zA-Z]\\w*",
-      "name": "variable"
+      "name": "variable.boa"
     },
     "keyword": {
       "match": "let|in|if|:|else:|=|,",
-      "name":"keyword.control"
+      "name":"keyword.control.boa"
     },
     "operator": {
       "match": "add1|sub1|\\+|-|\\*",
-      "name":"keyword.operator"
+      "name":"keyword.operator.boa"
     },
     
     "paren-expression": {
       "begin": "\\(",
       "end": "\\)",
       "beginCaptures": {
-        "0": { "name": "punctuation.paren.open" }
+        "0": { "name": "punctuation.paren.open.boa" }
       },
       "endCaptures": {
-        "0": { "name": "punctuation.paren.close" }
+        "0": { "name": "punctuation.paren.close.boa" }
       },
-      "name": "expression.group",
+      "name": "expression.group.boa",
       "patterns": [{ "include": "#expression" }]
     }
   }

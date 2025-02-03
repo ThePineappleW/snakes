@@ -14,35 +14,34 @@
     },
     "number": {
       "match": "-?\\d+",
-      "name": "constant.numeric"
+      "name": "constant.numeric.cobra"
     }, 
     "boolean": {
       "match": "true|false",
-      "name": "constant.language"
+      "name": "constant.language.cobra"
     }, 
     "identifier": {
       "match": "[a-zA-Z]\\w*",
-      "name": "variable"
+      "name": "variable.cobra"
     },
     "keyword": {
       "match": "let|in|if|:|else:|=|,",
-      "name":"keyword.control"
+      "name":"keyword.control.cobra"
     },
     "operator": {
-      "match": "add1|sub1|\\+|-|\\*|!|<|>|<=|>=|==|&&|\\|\\||print||isbool|isnum",
-      "name":"keyword.operator"
+      "match": "add1|sub1|\\+|-|\\*|!|<|>|<=|>=|==|&&|\\|\\||print|isbool|isnum",
+      "name":"keyword.operator.cobra"
     },
-    
     "paren-expression": {
       "begin": "\\(",
       "end": "\\)",
       "beginCaptures": {
-        "0": { "name": "punctuation.paren.open" }
+        "0": { "name": "punctuation.paren.open.cobra" }
       },
       "endCaptures": {
-        "0": { "name": "punctuation.paren.close" }
+        "0": { "name": "punctuation.paren.close.cobra" }
       },
-      "name": "expression.group",
+      "name": "expression.group.cobra",
       "patterns": [{ "include": "#expression" }]
     }
   }

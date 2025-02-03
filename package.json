@@ -4,7 +4,7 @@
   "description": "Language support for CS4410",
    "publisher": "Emery",
   "repository": "https://github.com/ThePineappleW/snakes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.21.0"
   },
@@ -21,6 +21,12 @@
         "aliases": ["Boa", "boa"],
         "extensions": [".boa"],
         "configuration": "./configs/boa-language-configuration.json"
+      },
+      {
+        "id": "cobra",
+        "aliases": ["Cobra", "cobra"],
+        "extensions": [".cobra"],
+        "configuration": "./configs/cobra-language-configuration.json"
       }
     ],
     "grammars": [
@@ -33,6 +39,11 @@
         "language": "boa",
         "scopeName": "source.boa",
         "path": "./syntaxes/boa.tmLanguage.json"
+      },
+      {
+        "language": "cobra",
+        "scopeName": "source.cobra",
+        "path": "./syntaxes/cobra.tmLanguage.json"
       }
     ]
   }

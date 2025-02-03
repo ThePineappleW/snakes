@@ -1,10 +1,10 @@
 {
-  "scopeName": "source.adder",
+  "scopeName": "source.boa",
   "patterns": [{ "include": "#expression" }],
   "repository": {
     "expression": {
       "patterns": [
-        { "include": "#let" },
+        { "include": "#keyword" },
         { "include": "#operator" },
         { "include": "#number" },
         { "include": "#identifier" },
@@ -19,14 +19,15 @@
       "match": "[a-zA-Z]\\w*",
       "name": "variable"
     },
-    "let": {
-      "match": "let",
+    "keyword": {
+      "match": "let|in|if|:|else:|=|,",
       "name":"keyword.control"
     },
     "operator": {
-      "match": "add1|sub1",
-      "name": "keyword.operator"
+      "match": "add1|sub1|\\+|-|\\*",
+      "name":"keyword.operator"
     },
+    
     "paren-expression": {
       "begin": "\\(",
       "end": "\\)",

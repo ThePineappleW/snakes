@@ -4,22 +4,36 @@
   "description": "Language support for CS4410",
    "publisher": "Emery",
   "repository": "https://github.com/ThePineappleW/snakes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.21.0"
   },
   "contributes": {
-    "languages": [{
+    "languages": [
+      {
         "id": "adder",
         "aliases": ["Adder", "adder"],
         "extensions": [".adder"],
         "configuration": "./configs/adder-language-configuration.json"
+      },
+      {
+        "id": "boa",
+        "aliases": ["Boa", "boa"],
+        "extensions": [".boa"],
+        "configuration": "./configs/boa-language-configuration.json"
       }
     ],
-    "grammars": [{
+    "grammars": [
+      {
         "language": "adder",
         "scopeName": "source.adder",
         "path": "./syntaxes/adder.tmLanguage.json"
-    }]
+      },
+      {
+        "language": "boa",
+        "scopeName": "source.boa",
+        "path": "./syntaxes/boa.tmLanguage.json"
+      }
+    ]
   }
 }

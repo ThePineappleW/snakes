@@ -1,0 +1,80 @@
+{
+  "scopeName": "source.diamondback",
+  "patterns": [
+    { "include": "#declaration" },
+    { "include": "#expression" },
+    { "include": "#comment" }
+  ],
+  "repository": {
+    "expression": {
+      "patterns": [
+        { "include": "#number" },
+        { "include": "#boolean" },
+        { "include": "#function" },
+        { "include": "#identifier" },
+        { "include": "#keyword" },
+        { "include": "#prim1" },
+        { "include": "#prim2" },
+        { "include": "#paren-expression" }
+      ]
+    },
+    "number": {
+      "match": "-?\\d+",
+      "name": "constant.numeric.cobra"
+    }, 
+    "boolean": {
+      "match": "true|false",
+      "name": "constant.language.cobra"
+    },
+    "function": {
+      "begin": "([a-zA-Z]\\w*\\)(",
+      "end": "\\)",
+      "name": "variable.cobra",
+      "beginCaptures": {
+        "1": {"name" : "name.function.cobra"}
+      },
+      "patterns": [{ "include": "#expression" }]
+    },
+    "identifier": {
+      "match": "[a-zA-Z]\\w*",
+      "name": "variable.cobra"
+    },
+    "keyword": {
+      "match": "let|in|if|:|else:|=|,",
+      "name":"keyword.control.cobra"
+    },
+    "prim1": {
+      "match": "add1|sub1|!|print|printStack|isbool|isnum",
+      "name": "keyword.operator.prim1.cobra"
+    },
+    "prim2": {
+      "match": "\\+|-|\\*|=<|>|<=|>=|==|&&|\\|\\|",
+      "name":"keyword.operator.prim2.cobra"
+    },    
+    "paren-expression": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.paren.open.cobra" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.paren.close.cobra" }
+      },
+      "name": "expression.group.cobra",
+      "patterns": [{ "include": "#expression" }]
+    },
+    "declaration": {
+      "start": "def\\s*\\([a-zA-Z]\\w*)\\s*(",
+      "end": "\\)\\s*:",
+      "name": "meta.function.cobra",
+      "beginCaptures": {
+        "1": {"name" : "name.function.cobra"}
+      },
+      "patterns": [{ "include": "#identifier"}]
+    },
+    "comments": {
+      "match": "(#).*",
+      "name": "comment.line.number-sign.cobra"
+    }
+  }
+}

@@ -27,6 +27,12 @@
         "aliases": ["Cobra", "cobra"],
         "extensions": [".cobra"],
         "configuration": "./configs/cobra-language-configuration.json"
+      },
+      {
+        "id": "diamondback",
+        "aliases": ["Diamondback", "diamondback", "dback"],
+        "extensions": [".diamond"],
+        "configuration": "./configs/diamondback-language-configuration.json"
       }
     ],
     "grammars": [
@@ -44,6 +50,11 @@
         "language": "cobra",
         "scopeName": "source.cobra",
         "path": "./syntaxes/cobra.tmLanguage.json"
+      },
+      {
+        "language": "diamondback",
+        "scopeName": "source.diamondback",
+        "path": "./syntaxes/diamondback.tmLanguage.json"
       }
     ]
   }
